@@ -1,0 +1,126 @@
+* {
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 1.5fr 0.3fr 1.2fr 0.1fr;
+    /* In 100vh all classes will be appear  */
+    grid-template-areas: "nav nav nav nav" "sidebar main main main" "sidebar news news news" "sidebar content1 content2 content3" "footer footer footer footer";
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    color: black;
+}
+
+nav {
+    background-color: #2E4053;
+    grid-area: nav;
+}
+
+main {
+    background-color: #82E0AA;
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+news {
+    background-color: #F4D03F;
+    grid-area: news;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sidebar {
+    background-color: #BDC3C7;
+    grid-area: sidebar;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content1 {
+    background-color: #BB8FCE;
+    grid-area: content1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content2 {
+    background-color: #407e5a;
+    grid-area: content2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content3 {
+    background-color: cornflowerblue;
+    grid-area: content3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    background-color: #17202A;
+    grid-area: footer;
+    color: white;
+    padding: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label.logo {
+    color: white;
+    font-size: 20px;
+    padding: 1.5em 2em;
+    float: left;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+    padding: 2em;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 0.2vw;
+}
+
+nav ul li a {
+    color: white;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 550px) {
+    .container {
+        height: auto;
+    }
+    nav ul {
+        float: none;
+        margin-right: 20px;
+        padding: 2em;
+    }
+    nav ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        padding: 0.5em;
+    }
+}
